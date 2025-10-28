@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Online Courses — Landing</title>
+
+    <!-- Tailwind Play CDN (no build step) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind custom config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandPurple: "#5b21b6",
+              brandPink: "#b692ff",
+              gradientStart: "#4f46e5",
+              gradientEnd: "#8b5cf6",
+            },
+            fontFamily: {
+              display: ["Inter", "ui-sans-serif", "system-ui"],
+              body: ["Inter", "ui-sans-serif", "system-ui"],
+            },
+            borderRadius: { "xl-2": "1.25rem" },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* small extra styling */
+      body {
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      .glass {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.18),
+          rgba(255, 255, 255, 0.06)
+        );
+        backdrop-filter: blur(6px);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <!-- NAVBAR -->
+    <header class="w-full">
+      <div class="max-w-7xl mx-auto px-6">
+        <nav class="flex items-center justify-between py-6">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-10 h-10 rounded-full bg-gradient-to-r from-gradientStart to-gradientEnd flex items-center justify-center shadow-lg text-white font-bold"
+            >
+              EL
+            </div>
+            <div>
+              <a href="#" class="text-lg font-semibold">EduLearn</a>
+              <div class="text-xs text-slate-400">Online Courses</div>
+            </div>
+          </div>
+
+          <ul class="hidden md:flex items-center gap-8 text-slate-700">
+            <li><a href="#" class="hover:text-slate-900">Home</a></li>
+            <li><a href="#" class="hover:text-slate-900">About</a></li>
+            <li><a href="#" class="hover:text-slate-900">Courses</a></li>
+            <li><a href="#" class="hover:text-slate-900">Contact</a></li>
+          </ul>
+
+          <div class="flex items-center gap-3">
+            <button
+              class="hidden md:inline-block px-4 py-2 rounded-md text-sm border border-slate-200"
+            >
+              Login
+            </button>
+            <a
+              href="#"
+              class="inline-block px-4 py-2 bg-gradient-to-r from-gradientStart to-gradientEnd text-white rounded-md shadow hover:opacity-95 text-sm"
+              >Sign up</a
+            >
+
+            <!-- mobile menu button -->
+            <button
+              id="mobileBtn"
+              class="md:hidden ml-2 p-2 rounded-md text-slate-700"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 8h16M4 16h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden px-6 pb-6">
+        <ul class="flex flex-col gap-3 text-slate-700">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section class="relative overflow-hidden">
+        <div
+          class="bg-gradient-to-r from-gradientStart via-brandPurple to-gradientEnd"
+        >
+          <div class="max-w-7xl mx-auto px-6">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-20"
+            >
+              <!-- left -->
+              <div class="lg:col-span-7 text-white">
+                <p class="text-sm uppercase tracking-widest opacity-80">
+                  Successful coaches are visionaries
+                </p>
+                <h1
+                  class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight"
+                >
+                  Good <span class="text-brandPink">coaching</span> is good
+                  teaching & nothing else.
+                </h1>
+                <p class="mt-5 text-lg max-w-xl text-white/90">
+                  Create modern learning experiences and take your skills
+                  further with curated courses from industry experts.
+                </p>
+
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="#"
+                    class="inline-block px-6 py-3 bg-white text-gradientStart rounded-lg font-medium shadow"
+                    >View Courses</a
+                  >
+                  <a
+                    href="#"
+                    class="inline-block px-6 py-3 border border-white/30 rounded-lg font-medium text-white/95"
+                    >Get Free Consultation</a
+                  >
+                </div>
+
+                <div class="mt-8 flex items-center gap-3">
+                  <div class="bg-white/10 px-3 py-2 rounded-md">
+                    <svg
+                      class="w-5 h-5 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M3 12h18" />
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="What do you want to learn today?"
+                    class="flex-1 rounded-full px-4 py-3 bg-white/10 placeholder-white/70 text-white outline-none"
+                  />
+                  <button
+                    class="px-4 py-3 rounded-full bg-white/10 border border-white/20 text-white"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+
+              <!-- right / hero image -->
+              <div
+                class="lg:col-span-5 relative flex justify-center lg:justify-end bg-contain bg-no-repeat bg-center h-[800px]"
+                style="background-image: url('./assets/hero_image.webp')"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED COURSES -->
+      <section class="max-w-7xl mx-auto px-6 -mt-12">
+        <div class="bg-white rounded-2xl shadow-lg p-8 glass">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-2xl font-bold">Featured Course</h2>
+              <p class="text-sm text-slate-600">
+                The feature courses are we invented our teaching part
+              </p>
+            </div>
+            <a href="#" class="text-sm text-gradientStart font-medium"
+              >Explore courses →</a
+            >
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- card -->
+            <article
+              class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden"
+            >
+              <div
+                class="h-44 bg-gradient-to-br from-pink-50 to-purple-50 flex items-center justify-center bg-cover bg-center rounded-2xl"
+                style="background-image: url('./assets/card_image_4.webp')"
+              ></div>
+              <div class="p-4">
+                <h3 class="font-semibold">
+                  Motion Graphics: Create a Nice Typography Animation
+                </h3>
+                <p class="mt-3 text-sm text-slate-500">9k students • 3h</p>
+                <div class="mt-4 flex items-center justify-between">
+                  <div class="text-lg font-bold">Rs.499</div>
+                  <a href="#" class="text-slate-500 text-sm">View</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- card -->
+            <article
+              class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden"
+            >
+              <div
+                class="h-44 bg-gradient-to-br from-amber-50 to-pink-50 flex items-center justify-center bg-cover bg-center"
+                style="background-image: url('./assets/card_image_5.webp')"
+              ></div>
+              <div class="p-4">
+                <h3 class="font-semibold">
+                  Advance PHP Knowledge with JS to make smart web
+                </h3>
+                <p class="mt-3 text-sm text-slate-500">5.3k students • 2h</p>
+                <div class="mt-4 flex items-center justify-between">
+                  <div class="text-lg font-bold">Rs.499</div>
+                  <a href="#" class="text-slate-500 text-sm">View</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- card -->
+            <article
+              class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden"
+            >
+              <div
+                class="h-44 bg-gradient-to-br from-cyan-50 to-blue-50 flex items-center justify-center bg-cover bg-center"
+                style="background-image: url('./assets/card_image_6.webp')"
+              ></div>
+              <div class="p-4">
+                <h3 class="font-semibold">
+                  Education Software and PHP and JS System Script
+                </h3>
+                <p class="mt-3 text-sm text-slate-500">4k students • 1.2h</p>
+                <div class="mt-4 flex items-center justify-between">
+                  <div class="text-lg font-bold">Rs.699</div>
+                  <a href="#" class="text-slate-500 text-sm">View</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- more example cards -->
+            <article
+              class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden"
+            >
+              <div
+                class="h-44 bg-gradient-to-br from-rose-50 to-orange-50 flex items-center justify-center bg-cover bg-center"
+                style="background-image: url('./assets/card_image_2.webp')"
+              ></div>
+              <div class="p-4">
+                <h3 class="font-semibold">
+                  The Complete Financial Analyst Training & Investing
+                </h3>
+                <p class="mt-3 text-sm text-slate-500">12k students • 5h</p>
+                <div class="mt-4 flex items-center justify-between">
+                  <div class="text-lg font-bold">Rs.499</div>
+                  <a href="#" class="text-slate-500 text-sm">View</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden"
+            >
+              <div
+                class="h-44 bg-gradient-to-br from-yellow-50 to-amber-50 flex items-center justify-center bg-cover bg-center"
+                style="background-image: url('./assets/card_image_3.webp')"
+              ></div>
+              <div class="p-4">
+                <h3 class="font-semibold">
+                  Marketing 2023: Complete Guide To Instagram Growth
+                </h3>
+                <p class="mt-3 text-sm text-slate-500">3k students • 3.5h</p>
+                <div class="mt-4 flex items-center justify-between">
+                  <div class="text-lg font-bold">Rs.499</div>
+                  <a href="#" class="text-slate-500 text-sm">View</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden"
+            >
+              <div
+                class="h-44 bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center bg-cover bg-center"
+                style="background-image: url('./assets/card_image_1.webp')"
+              ></div>
+              <div class="p-4">
+                <h3 class="font-semibold">
+                  Learn 3D Modeling and Design for Beginners
+                </h3>
+                <p class="mt-3 text-sm text-slate-500">2k students • 8h</p>
+                <div class="mt-4 flex items-center justify-between">
+                  <div class="text-lg font-bold">Rs.699</div>
+                  <a href="#" class="text-slate-500 text-sm">View</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY LEARN -->
+      <section class="max-w-7xl mx-auto px-6 mt-12">
+        <div
+          class="rounded-2xl overflow-hidden bg-gradient-to-r from-gradientStart to-gradientEnd text-white p-10 shadow-lg"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div
+                class="w-16 h-16 mx-auto flex items-center justify-center mb-4 bg-cover bg-center"
+                style="background-image: url('./assets/learning_icon.webp')"
+              ></div>
+              <h4 class="font-semibold">01. Learn</h4>
+              <p class="mt-2 text-sm text-white/90">
+                Learn continually. There is always <br />
+                "one more thing to learn".
+              </p>
+            </div>
+
+            <div>
+              <div
+                class="w-16 h-16 mx-auto flex items-center justify-center mb-4 bg-cover bg-center"
+                style="background-image: url('./assets/icon_1.webp')"
+              ></div>
+              <h4 class="font-semibold">02. Graduate</h4>
+              <p class="mt-2 text-sm text-white/90">
+                Be bold,be courageous,<br />
+                be your best.
+              </p>
+            </div>
+
+            <div>
+              <div
+                class="w-16 h-16 mx-auto flex items-center justify-center mb-4 bg-cover bg-center"
+                style="background-image: url('./assets/icon_2.webp')"
+              ></div>
+              <h4 class="font-semibold">03. Work</h4>
+              <p class="mt-2 text-sm text-white/90">
+                Great companies are built in <br />
+                the office,with hard work put <br />in by team.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORIES -->
+      <section class="max-w-7xl mx-auto px-6 mt-10">
+        <div class="text-center mb-8">
+          <h3 class="text-xl font-bold">Top Categories</h3>
+          <p class="text-sm text-slate-600">
+            100+ unique online course list designs
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+          <!-- category -->
+          <div class="bg-white border rounded-xl p-4 text-center shadow-sm">
+            <div
+              class="w-12 h-12 rounded-md bg-[#DF385B] mx-auto flex items-center justify-center mb-2 p-4"
+            >
+              <img
+                src="./assets/digital_marketing_icon.webp"
+                class="object-contain"
+              />
+            </div>
+            <div class="text-sm font-medium">Digital <br />Marketing</div>
+            <div class="text-xs text-slate-400 mt-1">25 Courses</div>
+          </div>
+
+          <div class="bg-white border rounded-xl p-4 text-center shadow-sm">
+            <div
+              class="w-12 h-12 rounded-md bg-[#5AB48E] mx-auto flex items-center justify-center mb-2 p-4"
+            >
+              <img
+                src="./assets/web_development_icon.webp"
+                class="object-contain"
+              />
+            </div>
+            <div class="text-sm font-medium">
+              Web <br />
+              Development
+            </div>
+            <div class="text-xs text-slate-400 mt-1">18 Courses</div>
+          </div>
+
+          <div class="bg-white border rounded-xl p-4 text-center shadow-sm">
+            <div
+              class="w-12 h-12 rounded-md bg-[#7F56D9] mx-auto flex items-center justify-center mb-2 p-4"
+            >
+              <img src="./assets/art_icon.webp" class="object-contain" />
+            </div>
+            <div class="text-sm font-medium">
+              Art & <br />
+              Humanities
+            </div>
+            <div class="text-xs text-slate-400 mt-1">79 Courses</div>
+          </div>
+
+          <div class="bg-white border rounded-xl p-4 text-center shadow-sm">
+            <div
+              class="w-12 h-12 rounded-md bg-[#FAB437] mx-auto flex items-center justify-center mb-2 p-4"
+            >
+              <img
+                src="./assets/personal_development_icon.webp"
+                class="object-contain"
+              />
+            </div>
+            <div class="text-sm font-medium">
+              Personal <br />
+              Development
+            </div>
+            <div class="text-xs text-slate-400 mt-1">20 Courses</div>
+          </div>
+
+          <div class="bg-white border rounded-xl p-4 text-center shadow-sm">
+            <div
+              class="w-12 h-12 rounded-md bg-[#2AAA94] mx-auto flex items-center justify-center mb-2 p-4"
+            >
+              <img
+                src="./assets/it_software_icon.webp"
+                class="object-contain"
+              />
+            </div>
+            <div class="text-sm font-medium">
+              IT and <br />
+              Software
+            </div>
+            <div class="text-xs text-slate-400 mt-1">100 Courses</div>
+          </div>
+
+          <div class="bg-white border rounded-xl p-4 text-center shadow-sm">
+            <div
+              class="w-12 h-12 rounded-md bg-[#2CD182] mx-auto flex items-center justify-center mb-2 p-4"
+            >
+              <img
+                src="./assets/graphic_design_icon.webp"
+                class="object-contain"
+              />
+            </div>
+            <div class="text-sm font-medium">
+              Graphic <br />
+              Design
+            </div>
+            <div class="text-xs text-slate-400 mt-1">55 Courses</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBSCRIBE CTA -->
+      <section class="relative max-w-4xl mx-auto mt-12 px-6">
+        <div
+          class="relative rounded-2xl bg-cover bg-center text-white py-16 px-6 flex flex-col items-center gap-6"
+          style="background-image: url('./assets/subscription_bg.webp')"
+        >
+          <!-- Floating decorative image -->
+          <div
+            class="absolute top-4 left-4 w-12 h-12 bg-center bg-contain bg-no-repeat"
+            style="background-image: url('./assets/Ellipse_1.webp')"
+          ></div>
+          <div
+            class="absolute top-1/2 left-20 -translate-y-1/2 w-12 h-12 bg-center bg-contain bg-no-repeat"
+            style="background-image: url('./assets/Ellipse_2.webp')"
+          ></div>
+          <div
+            class="absolute bottom-4 left-4 w-12 h-12 bg-center bg-contain bg-no-repeat"
+            style="background-image: url('./assets/Ellipse_3.webp')"
+          ></div>
+          <div
+            class="absolute right-4 top-4 w-12 h-12 bg-center bg-contain bg-no-repeat"
+            style="background-image: url('./assets/Ellipse_4.webp')"
+          ></div>
+          <div
+            class="absolute right-20 top-1/2 -translate-y-1/2 w-12 h-12 bg-center bg-contain bg-no-repeat"
+            style="background-image: url('./assets/Ellipse_5.webp')"
+          ></div>
+          <div
+            class="absolute bottom-4 right-4 w-12 h-12 bg-center bg-contain bg-no-repeat"
+            style="background-image: url('./assets/Ellipse_6.webp')"
+          ></div>
+
+          <!-- Content -->
+          <div class="text-center">
+            <h4 class="text-3xl font-bold">
+              Subscribe For Get Update Every New Courses
+            </h4>
+            <p class="mt-2 text-white/90">
+              20k+ students daily learn with Eduvi. Subscribe for new courses.
+            </p>
+          </div>
+
+          <!-- Input -->
+          <div class="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-2/3">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 px-4 py-3 rounded-md outline-none text-slate-700"
+            />
+            <button
+              class="px-6 py-3 bg-indigo-700 text-white font-medium rounded-md hover:bg-indigo-800 transition"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+        <div
+          class="absolute -left-2 -bottom-8 w-12 h-12 bg-center bg-contain bg-no-repeat"
+          style="background-image: url('./assets/Polygon\ 8.webp')"
+        ></div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="max-w-7xl mx-auto px-6 mt-12 mb-16">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-[#0E38CD]">Testimonials</h3>
+          <p class="text-sm text-slate-600">What our students say about us</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow">
+            <div class="flex items-center gap-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="avatar"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <div class="font-semibold">Anita Roy</div>
+                <div class="text-xs text-slate-400">Product Designer</div>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-slate-600">
+              The courses were well-structured and the mentors were highly
+              supportive. I've improved my skills dramatically.
+            </p>
+            <div class="mt-4 text-yellow-400">★★★★★</div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow">
+            <div class="flex items-center gap-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="avatar"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <div class="font-semibold">Ravi Kumar</div>
+                <div class="text-xs text-slate-400">Full-stack dev</div>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-slate-600">
+              Great content and hands-on projects. The community helped me land
+              my first job as a developer.
+            </p>
+            <div class="mt-4 text-yellow-400">★★★★★</div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow">
+            <div class="flex items-center gap-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/85.jpg"
+                alt="avatar"
+                class="w-12 h-12 rounded-full"
+              />
+              <div>
+                <div class="font-semibold">Priya Shah</div>
+                <div class="text-xs text-slate-400">Data Analyst</div>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-slate-600">
+              The instructors are industry professionals and the projects were
+              realistic. Highly recommend.
+            </p>
+            <div class="mt-4 text-yellow-400">★★★★★</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-gradient-to-r from-gradientStart to-gradientEnd text-white"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="text-xl font-bold mb-2">EduLearn</div>
+            <p class="text-sm text-white/80">
+              Empower your career with practical, online courses taught by
+              industry experts.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="font-semibold mb-3">Classes</h5>
+            <ul class="text-sm space-y-2 text-white/90">
+              <li>Classroom courses</li>
+              <li>Online courses</li>
+              <li>Video courses</li>
+              <li>Offline courses</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-semibold mb-3">Community</h5>
+            <ul class="text-sm space-y-2 text-white/90">
+              <li>Learners</li>
+              <li>Instructors</li>
+              <li>Developers</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="font-semibold mb-3">Quick links</h5>
+            <ul class="text-sm space-y-2 text-white/90">
+              <li>Courses</li>
+              <li>Pricing</li>
+              <li>FAQ</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white/10 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between"
+        >
+          <div class="text-sm text-white/80">
+            © 2025 EduLearn. All rights reserved.
+          </div>
+          <div class="flex gap-4 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10"
+              >f</a
+            >
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10"
+              >in</a
+            >
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10"
+              >y</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- small script for mobile menu -->
+    <script>
+      const mobileBtn = document.getElementById("mobileBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
