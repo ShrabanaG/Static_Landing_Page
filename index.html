@@ -7,6 +7,16 @@
 
     <!-- Tailwind Play CDN (no build step) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind custom config -->
     <script>
@@ -32,8 +42,7 @@
     <style>
       /* small extra styling */
       body {
-        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial;
+        font-family: "Righteous", sans-serif;
       }
       .glass {
         background: linear-gradient(
@@ -43,23 +52,21 @@
         );
         backdrop-filter: blur(6px);
       }
+      .sub-heading {
+        font-family: "Saira", sans-serif;
+      }
     </style>
   </head>
-  <body class="bg-slate-50 text-slate-800 antialiased">
+  <body>
     <!-- NAVBAR -->
     <header class="w-full">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6 h-[119px]">
         <nav class="flex items-center justify-between py-6">
           <div class="flex items-center gap-4">
-            <div
-              class="w-10 h-10 rounded-full bg-gradient-to-r from-gradientStart to-gradientEnd flex items-center justify-center shadow-lg text-white font-bold"
-            >
-              EL
-            </div>
-            <div>
-              <a href="#" class="text-lg font-semibold">EduLearn</a>
-              <div class="text-xs text-slate-400">Online Courses</div>
-            </div>
+            <img
+              src="./assets/logo.webp"
+              class="w-[191px] h-[70px] object-contain"
+            />
           </div>
 
           <ul class="hidden md:flex items-center gap-8 text-slate-700">
@@ -68,6 +75,29 @@
             <li><a href="#" class="hover:text-slate-900">Courses</a></li>
             <li><a href="#" class="hover:text-slate-900">Contact</a></li>
           </ul>
+
+          <div class="flex items-center justify-between gap-8">
+            <div class="relative inline-block">
+              <img
+                src="./assets/nav_Icon_1.webp"
+                class="w-[25px] h-[25px] object-contain"
+              />
+              <div
+                class="absolute -top-3 left-2 flex items-center justify-center rounded-full w-[20px] h-[20px] text-white bg-[#2AAA94] text-[10px]"
+              >
+                0
+              </div>
+            </div>
+
+            <img
+              src="./assets/nav_icon_2.webp"
+              class="w-[25px] h-[25px] object-contain"
+            />
+            <img
+              src="./assets/nav_icon_3.webp"
+              class="w-[25px] h-[25px] object-contain"
+            />
+          </div>
 
           <div class="flex items-center gap-3">
             <button
@@ -120,76 +150,105 @@
     <main>
       <section class="relative overflow-hidden">
         <div
-          class="bg-gradient-to-r from-gradientStart via-brandPurple to-gradientEnd"
+          class="bg-gradient-to-r from-gradientStart via-brandPurple to-gradientEnd relative"
         >
-          <div class="max-w-7xl mx-auto px-6">
-            <div
-              class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-20"
-            >
-              <!-- left -->
-              <div class="lg:col-span-7 text-white">
-                <p class="text-sm uppercase tracking-widest opacity-80">
-                  Successful coaches are visionaries
-                </p>
-                <h1
-                  class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight"
-                >
-                  Good <span class="text-brandPink">coaching</span> is good
-                  teaching & nothing else.
-                </h1>
-                <p class="mt-5 text-lg max-w-xl text-white/90">
-                  Create modern learning experiences and take your skills
-                  further with curated courses from industry experts.
-                </p>
-
-                <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="#"
-                    class="inline-block px-6 py-3 bg-white text-gradientStart rounded-lg font-medium shadow"
-                    >View Courses</a
-                  >
-                  <a
-                    href="#"
-                    class="inline-block px-6 py-3 border border-white/30 rounded-lg font-medium text-white/95"
-                    >Get Free Consultation</a
-                  >
+          <div
+            class="max-w-7xl flex flex-row items-center justify-between gap-4 p-8"
+          >
+            <div class="flex flex-col">
+              <div class="text-white text-xl p-4">
+                Successful coaches are visionaries
+              </div>
+              <div class="flex flex-row items-center justify-between gap-8">
+                <div class="text-3xl text-white font-bold leading-[50px]">
+                  Good <span class="text-[#0E38CD]">coaching</span> is <br />
+                  good teaching & <br />
+                  nothing else.
                 </div>
+                <div class="flex flex-row items-center justify-between gap-4">
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="border-l-2 border-[#0094E7] h-[30px]"></div>
 
-                <div class="mt-8 flex items-center gap-3">
-                  <div class="bg-white/10 px-3 py-2 rounded-md">
-                    <svg
-                      class="w-5 h-5 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="w-[20px] h-[20px] bg-[#0094E7] rounded-full relative"
                     >
-                      <path d="M3 12h18" />
-                    </svg>
+                      <img
+                        src="./assets/comma_icon.webp"
+                        class="absolute top-[5px] left-[6px] w-2 h-2 object-contain"
+                      />
+                    </div>
+
+                    <div class="border-l-2 border-[#0094E7] h-[30px]"></div>
                   </div>
-                  <input
-                    type="text"
-                    placeholder="What do you want to learn today?"
-                    class="flex-1 rounded-full px-4 py-3 bg-white/10 placeholder-white/70 text-white outline-none"
-                  />
-                  <button
-                    class="px-4 py-3 rounded-full bg-white/10 border border-white/20 text-white"
-                  >
-                    Search
-                  </button>
+                  <div class="flex flex-col gap-2">
+                    <div class="text-[10px] text-white">Shyam</div>
+                    <div class="text-[10px] text-white">
+                      In a coaching role, you ask the <br />
+                      questions and rely more on your staff, <br />
+                      who become the experts, to provide the information.
+                    </div>
+                    <div class="text-[10px] text-[#0094E7]">4.9</div>
+                  </div>
                 </div>
               </div>
-
-              <!-- right / hero image -->
               <div
-                class="lg:col-span-5 relative flex justify-center lg:justify-end bg-contain bg-no-repeat bg-center h-[800px]"
-                style="background-image: url('./assets/hero_image.webp')"
-              ></div>
+                class="flex flex-row items-start justify-start gap-8 mt-6 text-center"
+              >
+                <div class="p-2 border border-white text-sm text-white">
+                  View Courses
+                </div>
+                <div class="text-sm text-white">Get Free Consultation</div>
+              </div>
+              <div
+                class="flex items-center justify-between max-w-md w-full bg-white rounded-md shadow-md px-4 py-2 mt-4"
+              >
+                <input
+                  type="text"
+                  placeholder="What do you want to learn today?"
+                  class="flex-1 outline-none text-gray-700 placeholder:text-gray-400 text-sm bg-transparent"
+                />
+
+                <button
+                  class="flex items-center gap-2 bg-gradient-to-r from-[#6A5AE0] to-[#5B4CEB] text-white text-sm font-medium rounded-full px-4 py-2 transition-all hover:opacity-90"
+                >
+                  <img
+                    src="./assets/nav_icon_3.webp"
+                    alt="Search"
+                    class="w-4 h-4"
+                  />
+                  Search
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative w-[400px] h-[500px] flex items-center justify-center overflow-hidden"
+            >
+              <img
+                src="./assets/hero_bg_cover.webp"
+                class="absolute bottom-0 right-20 w-[300px] opacity-90"
+              />
+              <img
+                src="./assets/hero_image.webp"
+                alt="hero"
+                class="relative z-10 w-[400px]"
+              />
+            </div>
+            <div class="absolute bottom-1/2">
+              <img
+                src="./assets/first_rect.webp"
+                class="absolute w-[300px] h-auto opacity-90"
+              />
+              <img
+                src="./assets/middle_rect.webp"
+                class="absolute w-[260px] h-auto opacity-80"
+              />
             </div>
           </div>
         </div>
       </section>
 
       <!-- FEATURED COURSES -->
-      <section class="max-w-7xl mx-auto px-6 -mt-12">
+      <section class="max-w-7xl mx-auto px-6">
         <div class="bg-white rounded-2xl shadow-lg p-8 glass">
           <div class="flex items-center justify-between mb-6">
             <div>
@@ -328,10 +387,19 @@
       <!-- WHY LEARN -->
       <section class="max-w-7xl mx-auto px-6 mt-12">
         <div
-          class="rounded-2xl overflow-hidden bg-gradient-to-r from-gradientStart to-gradientEnd text-white p-10 shadow-lg"
+          class="rounded-2xl overflow-hidden bg-gradient-to-r from-gradientStart to-gradientEnd text-white p-10 shadow-lg flex flex-col items-center justify-center"
         >
+          <div class="text-3xl text-white mb-4">
+            Why <span class="text-[#0E38CD]">learn</span> with our courses?
+          </div>
+          <div class="sub-heading text-white mb-4">
+            We are providing the best courses and top classes.And <br />
+            extradinery placement training.....
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div>
+            <div
+              class="h-[200px] border-r-[1px] border-dashed border-white p-6"
+            >
               <div
                 class="w-16 h-16 mx-auto flex items-center justify-center mb-4 bg-cover bg-center"
                 style="background-image: url('./assets/learning_icon.webp')"
@@ -343,7 +411,9 @@
               </p>
             </div>
 
-            <div>
+            <div
+              class="h-[200px] border-r-[1px] border-dashed border-white p-6"
+            >
               <div
                 class="w-16 h-16 mx-auto flex items-center justify-center mb-4 bg-cover bg-center"
                 style="background-image: url('./assets/icon_1.webp')"
@@ -599,6 +669,23 @@
             </p>
             <div class="mt-4 text-yellow-400">★★★★★</div>
           </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-6 mt-12 mb-16 relative">
+        <div class="flex items-center justify-center relative">
+          <img
+            src="./assets/video_bg.webp"
+            class="object-cover rounded-xl h-[400px]"
+          />
+          <img
+            src="./assets/pause_icon.webp"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          />
+          <img
+            src="./assets/banner_right.webp"
+            class="absolute bottom-0 right-20 object-contain w-[100px] h-[100px]"
+          />
         </div>
       </section>
     </main>
